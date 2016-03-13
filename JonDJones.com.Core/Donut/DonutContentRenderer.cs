@@ -17,7 +17,6 @@ namespace JonDJones.com.Core.Donut
 {
     public class DonutContentRenderer : ContentAreaRenderer
     {
-
         public DonutContentRenderer(IContentRenderer contentRenderer,
                                     TemplateResolver templateResolver,
                                     ContentFragmentAttributeAssembler attributeAssembler,
@@ -38,24 +37,27 @@ namespace JonDJones.com.Core.Donut
             if (content == null)
                 return;
 
-            var serialisedContent = SerializeBlockContentReference(content);
-
-            var epiServerDonutHoleFiller = new EpiServerDonutHoleFiller(new EncryptingActionSettingsSerialiser(new ActionSettingsSerialiser(), new Encryptor()));
+            var serialisedContent = EpiServerDonutHelper.SerializeBlockContentReference(content);
 
             using (var textWriter = new StringWriter())
             {
-                var cutomHtmlHelper = epiServerDonutHoleFiller.CreateHtmlHelper(htmlHelper.ViewContext.Controller, textWriter);
-                epiServerDonutHoleFiller.RenderContentData(cutomHtmlHelper, content, string.Empty);
+                var cutomHtmlHelper = EpiServerDonutHelper.CreateHtmlHelper(htmlHelper.ViewContext.Controller, textWriter);
+                EpiServerDonutHelper.RenderContentData(cutomHtmlHelper, content, string.Empty);
 
-                var outputString = string.Format("<!--Donut#{0}#-->{1}<!--EndDonut-->", serialisedContent, textWriter);
+                var tagBuilder = CreateContentAreaSeperatorHtmlTags(contentAreaItem, htmlTag, cssClass);
+                var epiServerHtml = EpiServerDonutHelper.CreateContentAreaDonutTag(tagBuilder, serialisedContent, textWriter.ToString());
 
-                htmlHelper.RenderXhtmlString(new XhtmlString(outputString));
+                htmlHelper.RenderXhtmlString(new XhtmlString(epiServerHtml));
             }
         }
 
-        private string SerializeBlockContentReference(IContent content)
+        private TagBuilder CreateContentAreaSeperatorHtmlTags(ContentAreaItem contentAreaItem, string htmlTag, string cssClass)
         {
-            return JsonConvert.SerializeObject(content.ContentLink);
+            var tagBuilder = new TagBuilder(htmlTag);
+            AddNonEmptyCssClass(tagBuilder, cssClass);
+            BeforeRenderContentAreaItemStartTag(tagBuilder, contentAreaItem);
+            return tagBuilder;
         }
+
     }
 }

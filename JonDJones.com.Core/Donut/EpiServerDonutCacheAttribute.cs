@@ -146,7 +146,7 @@ namespace JonDJones.com.Core.Donut
             CacheSettings = BuildCacheSettings();
 
             // Custom Code
-            var cacheKey = DonutHoleFiller.GenerateUniqueCacheKey(filterContext);
+            var cacheKey = EpiServerDonutHelper.GenerateUniqueCacheKey(filterContext);
 
             // If we are unable to generate a cache key it means we can't do anything
             if (string.IsNullOrEmpty(cacheKey))
@@ -250,7 +250,7 @@ namespace JonDJones.com.Core.Donut
                 return;
             }
 
-            var cacheKey = DonutHoleFiller.GenerateUniqueCacheKey(filterContext);
+            var cacheKey = EpiServerDonutHelper.GenerateUniqueCacheKey(filterContext);
 
             // See OnActionExecuting
             ExecuteCallback(filterContext, filterContext.Exception != null);
@@ -324,7 +324,7 @@ namespace JonDJones.com.Core.Donut
         private void ExecuteCallback(ControllerContext context, bool hasErrors)
         {
             // Custom code
-            var cacheKey = DonutHoleFiller.GenerateUniqueCacheKey(context);
+            var cacheKey = EpiServerDonutHelper.GenerateUniqueCacheKey(context);
 
             if (string.IsNullOrEmpty(cacheKey))
             {

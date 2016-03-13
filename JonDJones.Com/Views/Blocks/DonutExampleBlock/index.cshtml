@@ -5,7 +5,9 @@
     Donut One cached at: @Model.TheTime (expires every 60 seconds)
 </p>
 <div>
-    @{
-        Html.DonutHole(Model.CurrentBlock.MainContentArea);
+
+    @foreach(var content in Model.Content)
+    {
+        Html.DonutForContent(content);
     }
 </div>

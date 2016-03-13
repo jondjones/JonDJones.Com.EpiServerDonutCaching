@@ -28,5 +28,13 @@ namespace JonDJones.com.Core.ViewModel.Blocks
                 return DateTime.Now.ToString("HH:mm:ss");
             }
         }
+
+        public IEnumerable<IContent> Content
+        { 
+            get
+            {
+                return CurrentBlock.MainContentArea.FilteredItems.Select(x => x.GetContent());
+            }
+        }
     }
 }
