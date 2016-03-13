@@ -1264,3 +1264,5 @@ C:\Code\JonDJones.com.EpiserverDonutCaching\JonDJones.Com\bin\System.Web.WebPage
 C:\Code\JonDJones.com.EpiserverDonutCaching\JonDJones.Com\obj\Debug\JonDJones.Com.csprojResolveAssemblyReference.cache
 C:\Code\JonDJones.com.EpiserverDonutCaching\JonDJones.Com\obj\Debug\JonDJones.Com.dll
 C:\Code\JonDJones.com.EpiserverDonutCaching\JonDJones.Com\obj\Debug\JonDJones.Com.pdb
+C:\Code\JonDJones.com.EpiserverDonutCaching\JonDJones.Com\bin\JonDJones.Com.DonutHoleCaching.dll
+C:\Code\JonDJones.com.EpiserverDonutCaching\JonDJones.Com\bin\JonDJones.Com.DonutHoleCaching.pdb

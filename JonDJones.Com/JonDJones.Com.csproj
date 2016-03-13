@@ -449,6 +449,10 @@
       <Project>{a8dbbdfe-a36b-4c01-ab98-ac949c33138a}</Project>
       <Name>JonDJones.com.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\JonDJones.Com.DonutHoleCaching\JonDJones.Com.DonutHoleCaching.csproj">
+      <Project>{af59ffee-0ffb-4ce9-8674-38d7e7bd520d}</Project>
+      <Name>JonDJones.Com.DonutHoleCaching</Name>
+    </ProjectReference>
   </ItemGroup>
   <ProjectExtensions>
     <VisualStudio>

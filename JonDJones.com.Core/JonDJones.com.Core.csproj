@@ -182,11 +182,6 @@
     <Compile Include="ContextResolver\ContextResolver.cs" />
     <Compile Include="ContextResolver\IContextResolver.cs" />
     <Compile Include="Dependencies\EpiServerDependencies.cs" />
-    <Compile Include="Donut\DonutContentRenderer.cs" />
-    <Compile Include="Donut\DonutHtmlHelper.cs" />
-    <Compile Include="Donut\EpiServerDonutCacheAttribute.cs" />
-    <Compile Include="Donut\EpiServerDonutHelper.cs" />
-    <Compile Include="Donut\EpiServerDonutHoleFiller.cs" />
     <Compile Include="Entities\Location.cs" />
     <Compile Include="Entities\MenuItem.cs" />
     <Compile Include="Entities\PreviewArea.cs" />

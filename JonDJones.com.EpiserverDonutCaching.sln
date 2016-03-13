@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JonDJones.Com", "JonDJones.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JonDJones.com.Core", "JonDJones.com.Core\JonDJones.com.Core.csproj", "{A8DBBDFE-A36B-4C01-AB98-AC949C33138A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JonDJones.Com.DonutHoleCaching", "JonDJones.Com.DonutHoleCaching\JonDJones.Com.DonutHoleCaching.csproj", "{AF59FFEE-0FFB-4CE9-8674-38D7E7BD520D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A8DBBDFE-A36B-4C01-AB98-AC949C33138A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8DBBDFE-A36B-4C01-AB98-AC949C33138A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8DBBDFE-A36B-4C01-AB98-AC949C33138A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF59FFEE-0FFB-4CE9-8674-38D7E7BD520D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF59FFEE-0FFB-4CE9-8674-38D7E7BD520D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF59FFEE-0FFB-4CE9-8674-38D7E7BD520D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF59FFEE-0FFB-4CE9-8674-38D7E7BD520D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

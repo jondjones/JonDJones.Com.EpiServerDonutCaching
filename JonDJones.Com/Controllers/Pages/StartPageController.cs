@@ -5,7 +5,6 @@ using EPiServer.Core;
 using JonDJones.Com.Core.ViewModel;
 using JonDJones.Com.Controllers.Base;
 using JonDJones.Com.Core.ViewModel.Pages;
-using JonDJones.com.Core.Donut;
 using DevTrends.MvcDonutCaching;
 using DevTrends.MvcDonutCaching.Annotations;
 using System;
@@ -15,6 +14,7 @@ using System.Web;
 using EPiServer.Web.Routing;
 using EPiServer;
 using EPiServer.ServiceLocation;
+using JonDJones.Com.DonutHoleCaching;
 
 namespace JonDJones.Com.Controllers.Pages
 {

@@ -2,7 +2,6 @@
 using DevTrends.MvcDonutCaching;
 using EPiServer.Framework.DataAnnotations;
 using JonDJones.com.Core.Blocks;
-using JonDJones.com.Core.Donut;
 using JonDJones.com.Core.Resources;
 using JonDJones.com.Core.ViewModel.Blocks;
 using JonDJones.Com.Controllers.Base;

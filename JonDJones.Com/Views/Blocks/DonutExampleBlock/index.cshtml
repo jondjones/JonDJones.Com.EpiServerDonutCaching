@@ -1,5 +1,5 @@
 ﻿@model JonDJones.com.Core.ViewModel.Blocks.DonutExampleBlockViewModel
-@using JonDJones.com.Core.Donut
+@using JonDJones.Com.DonutHoleCaching
 
 <p class="DonutHole">
     Donut One cached at: @Model.TheTime (expires every 60 seconds)
@@ -10,4 +10,5 @@
     {
         Html.DonutForContent(content);
     }
+
 </div>
