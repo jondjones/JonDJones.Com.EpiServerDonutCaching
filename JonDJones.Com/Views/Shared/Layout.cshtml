@@ -1,0 +1,30 @@
+﻿@model JonDJones.Com.Core.Interfaces.IPageViewModel<JonDJones.Com.Core.Pages.Base.GlobalBasePage>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="@Model.Layout.MetaDataProperties.Current.Description">
+    <meta name="author" content="@Model.Layout.MetaDataProperties.Current.Author">
+
+    <title>
+        @(Model.Layout.MetaDataProperties.HasTitle
+                                                    ? @Model.CurrentPage.PageName
+                                                    : @Model.Layout.MetaDataProperties.Current.SeoTitle)
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="~/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+        @RenderBody()
+       
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="~/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

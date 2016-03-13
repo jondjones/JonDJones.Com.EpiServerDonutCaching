@@ -1,0 +1,5550 @@
+﻿﻿2016-03-12 22:44:11,981 [6] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 22:44:09 (expires every 5 seconds)
+</p>
+
+2016-03-12 22:44:11,998 [6] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 22:44:09 (expires every 5 seconds)
+</p>
+
+2016-03-12 22:44:13,982 [6] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 22:44:09 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 22:44:09 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 22:44:13,990 [6] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 22:44:09 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 22:44:09 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 22:44:14,903 [6] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 22:44:07 (expires in 24h)
+</p>
+<div>
+    <div><div>
+<p class="DonutHole">
+    Donut One cached at: 22:44:09 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 22:44:09 (expires every 5 seconds)
+</p>
+</div>
+</div></div><div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 22:44:14
+</p>
+</div></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 22:44:14,918 [6] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 22:44:07 (expires in 24h)
+</p>
+<div>
+    <div><div>
+<p class="DonutHole">
+    Donut One cached at: 22:44:09 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 22:44:09 (expires every 5 seconds)
+</p>
+</div>
+</div></div><div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 22:44:14
+</p>
+</div></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:10:25,728 [95] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 22:44:07 (expires in 24h)
+</p>
+<div>
+    <div><div>
+<p class="DonutHole">
+    Donut One cached at: 22:44:09 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 22:44:09 (expires every 5 seconds)
+</p>
+</div>
+</div></div><div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 22:44:14
+</p>
+</div></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:10:25,748 [95] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 22:44:07 (expires in 24h)
+</p>
+<div>
+    <div><div>
+<p class="DonutHole">
+    Donut One cached at: 22:44:09 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 22:44:09 (expires every 5 seconds)
+</p>
+</div>
+</div></div><div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 22:44:14
+</p>
+</div></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:10:47,365 [85] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:10:47 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:10:47,383 [85] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:10:47 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:11:02,746 [85] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:10:47 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:10:47 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:11:02,763 [85] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:10:47 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:10:47 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:11:21,854 [85] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:10:47 (expires in 24h)
+</p>
+<div>
+    <div><div>
+<p class="DonutHole">
+    Donut One cached at: 23:10:47 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:10:47 (expires every 5 seconds)
+</p>
+</div>
+</div></div><div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:11:21
+</p>
+</div></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:11:21,878 [85] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:10:47 (expires in 24h)
+</p>
+<div>
+    <div><div>
+<p class="DonutHole">
+    Donut One cached at: 23:10:47 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:10:47 (expires every 5 seconds)
+</p>
+</div>
+</div></div><div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:11:21
+</p>
+</div></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:20:45,780 [85] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:20:45 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:20:45,817 [85] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:20:45 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:21:00,792 [85] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:20:45 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:20:45 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:21:00,828 [85] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:20:45 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:20:45 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:21:02,062 [85] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:20:45 (expires in 24h)
+</p>
+<div>
+    <div><div>
+<p class="DonutHole">
+    Donut One cached at: 23:20:45 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:20:45 (expires every 5 seconds)
+</p>
+</div>
+</div></div><div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:21:02
+</p>
+</div></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:21:02,093 [85] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:20:45 (expires in 24h)
+</p>
+<div>
+    <div><div>
+<p class="DonutHole">
+    Donut One cached at: 23:20:45 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:20:45 (expires every 5 seconds)
+</p>
+</div>
+</div></div><div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:21:02
+</p>
+</div></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:24:30,951 [5] ERROR EPiServer.Global: 1.2.5 Unhandled exception in ASP.NET
+System.Web.HttpException (0x80004005): Path '/Views/Pages/StartPage/index.cshtml' was not found.
+   at System.Web.HttpNotFoundHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+System.Web.HttpException (0x80004005): Path '/Views/Pages/StartPage/index.cshtml' was not found.
+   at System.Web.HttpNotFoundHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-03-12 23:28:58,025 [5] ERROR EPiServer.Global: 1.2.5 Unhandled exception in ASP.NET
+System.Web.HttpException (0x80004005): Path '/Views/Pages/StartPage/index.cshtml' was not found.
+   at System.Web.HttpNotFoundHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+System.Web.HttpException (0x80004005): Path '/Views/Pages/StartPage/index.cshtml' was not found.
+   at System.Web.HttpNotFoundHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-03-12 23:29:03,738 [6] ERROR EPiServer.Global: 1.2.5 Unhandled exception in ASP.NET
+System.Web.HttpCompileException (0x80004005): c:\Code\JonDJones.Com.EpiServerForms\JonDJones.Com\Views\Pages\StartPage\index.cshtml(17): error CS1061: 'System.Web.Mvc.HtmlHelper<JonDJones.Com.Core.ViewModel.Pages.StartPageViewModel>' does not contain a definition for 'DonutHole' and no extension method 'DonutHole' accepting a first argument of type 'System.Web.Mvc.HtmlHelper<JonDJones.Com.Core.ViewModel.Pages.StartPageViewModel>' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.GetObjectFactory(String virtualPath, Boolean throwIfNotFound)
+   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.FileExists(String virtualPath)
+   at System.Web.Mvc.BuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.<>c__DisplayClass4.<GetPathFromGeneralName>b__0(String path)
+   at System.Web.WebPages.DefaultDisplayMode.GetDisplayInfo(HttpContextBase httpContext, String virtualPath, Func`2 virtualPathExists)
+   at System.Web.WebPages.DisplayModeProvider.<>c__DisplayClassb.<GetDisplayInfoForVirtualPath>b__8(IDisplayMode mode)
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at System.Web.WebPages.DisplayModeProvider.GetDisplayInfoForVirtualPath(String virtualPath, HttpContextBase httpContext, Func`2 virtualPathExists, IDisplayMode currentDisplayMode, Boolean requireConsistentDisplayMode)
+   at System.Web.WebPages.DisplayModeProvider.GetDisplayInfoForVirtualPath(String virtualPath, HttpContextBase httpContext, Func`2 virtualPathExists, IDisplayMode currentDisplayMode)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String cacheKey, String[]& searchedLocations)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String cacheKeyPrefix, Boolean useCache, String[]& searchedLocations)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.FindView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache)
+   at System.Web.Mvc.ViewEngineCollection.<>c__DisplayClassc.<FindView>b__b(IViewEngine e)
+   at System.Web.Mvc.ViewEngineCollection.Find(Func`2 lookup, Boolean trackSearchedPaths)
+   at System.Web.Mvc.ViewEngineCollection.Find(Func`2 cacheLocator, Func`2 locator)
+   at System.Web.Mvc.ViewEngineCollection.FindView(ControllerContext controllerContext, String viewName, String masterName)
+   at System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<InvokeActionResultWithFilters>b__17()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c__DisplayClass1d.<BeginExecuteCore>b__18(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass4.<MakeVoidDelegate>b__3(IAsyncResult ar)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass4.<MakeVoidDelegate>b__3(IAsyncResult ar)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass8.<BeginProcessRequest>b__3(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass4.<MakeVoidDelegate>b__3(IAsyncResult ar)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+System.Web.HttpCompileException (0x80004005): c:\Code\JonDJones.Com.EpiServerForms\JonDJones.Com\Views\Pages\StartPage\index.cshtml(17): error CS1061: 'System.Web.Mvc.HtmlHelper<JonDJones.Com.Core.ViewModel.Pages.StartPageViewModel>' does not contain a definition for 'DonutHole' and no extension method 'DonutHole' accepting a first argument of type 'System.Web.Mvc.HtmlHelper<JonDJones.Com.Core.ViewModel.Pages.StartPageViewModel>' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.GetObjectFactory(String virtualPath, Boolean throwIfNotFound)
+   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.FileExists(String virtualPath)
+   at System.Web.Mvc.BuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.<>c__DisplayClass4.<GetPathFromGeneralName>b__0(String path)
+   at System.Web.WebPages.DefaultDisplayMode.GetDisplayInfo(HttpContextBase httpContext, String virtualPath, Func`2 virtualPathExists)
+   at System.Web.WebPages.DisplayModeProvider.<>c__DisplayClassb.<GetDisplayInfoForVirtualPath>b__8(IDisplayMode mode)
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at System.Web.WebPages.DisplayModeProvider.GetDisplayInfoForVirtualPath(String virtualPath, HttpContextBase httpContext, Func`2 virtualPathExists, IDisplayMode currentDisplayMode, Boolean requireConsistentDisplayMode)
+   at System.Web.WebPages.DisplayModeProvider.GetDisplayInfoForVirtualPath(String virtualPath, HttpContextBase httpContext, Func`2 virtualPathExists, IDisplayMode currentDisplayMode)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String cacheKey, String[]& searchedLocations)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String cacheKeyPrefix, Boolean useCache, String[]& searchedLocations)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.FindView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache)
+   at System.Web.Mvc.ViewEngineCollection.<>c__DisplayClassc.<FindView>b__b(IViewEngine e)
+   at System.Web.Mvc.ViewEngineCollection.Find(Func`2 lookup, Boolean trackSearchedPaths)
+   at System.Web.Mvc.ViewEngineCollection.Find(Func`2 cacheLocator, Func`2 locator)
+   at System.Web.Mvc.ViewEngineCollection.FindView(ControllerContext controllerContext, String viewName, String masterName)
+   at System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<InvokeActionResultWithFilters>b__17()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c__DisplayClass1d.<BeginExecuteCore>b__18(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass4.<MakeVoidDelegate>b__3(IAsyncResult ar)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass4.<MakeVoidDelegate>b__3(IAsyncResult ar)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass8.<BeginProcessRequest>b__3(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass4.<MakeVoidDelegate>b__3(IAsyncResult ar)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-03-12 23:29:57,282 [15] ERROR EPiServer.Global: 1.2.5 Unhandled exception in ASP.NET
+System.Web.HttpCompileException (0x80004005): c:\Code\JonDJones.Com.EpiServerForms\JonDJones.Com\Views\Pages\StartPage\index.cshtml(18): error CS1061: 'JonDJones.Com.Core.ViewModel.Pages.StartPageViewModel' does not contain a definition for 'CurrentBlock' and no extension method 'CurrentBlock' accepting a first argument of type 'JonDJones.Com.Core.ViewModel.Pages.StartPageViewModel' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.GetObjectFactory(String virtualPath, Boolean throwIfNotFound)
+   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.FileExists(String virtualPath)
+   at System.Web.Mvc.BuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.<>c__DisplayClass4.<GetPathFromGeneralName>b__0(String path)
+   at System.Web.WebPages.DefaultDisplayMode.GetDisplayInfo(HttpContextBase httpContext, String virtualPath, Func`2 virtualPathExists)
+   at System.Web.WebPages.DisplayModeProvider.<>c__DisplayClassb.<GetDisplayInfoForVirtualPath>b__8(IDisplayMode mode)
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at System.Web.WebPages.DisplayModeProvider.GetDisplayInfoForVirtualPath(String virtualPath, HttpContextBase httpContext, Func`2 virtualPathExists, IDisplayMode currentDisplayMode, Boolean requireConsistentDisplayMode)
+   at System.Web.WebPages.DisplayModeProvider.GetDisplayInfoForVirtualPath(String virtualPath, HttpContextBase httpContext, Func`2 virtualPathExists, IDisplayMode currentDisplayMode)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String cacheKey, String[]& searchedLocations)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String cacheKeyPrefix, Boolean useCache, String[]& searchedLocations)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.FindView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache)
+   at System.Web.Mvc.ViewEngineCollection.<>c__DisplayClassc.<FindView>b__b(IViewEngine e)
+   at System.Web.Mvc.ViewEngineCollection.Find(Func`2 lookup, Boolean trackSearchedPaths)
+   at System.Web.Mvc.ViewEngineCollection.Find(Func`2 cacheLocator, Func`2 locator)
+   at System.Web.Mvc.ViewEngineCollection.FindView(ControllerContext controllerContext, String viewName, String masterName)
+   at System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<InvokeActionResultWithFilters>b__17()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c__DisplayClass1d.<BeginExecuteCore>b__18(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass4.<MakeVoidDelegate>b__3(IAsyncResult ar)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass4.<MakeVoidDelegate>b__3(IAsyncResult ar)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass8.<BeginProcessRequest>b__3(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass4.<MakeVoidDelegate>b__3(IAsyncResult ar)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+System.Web.HttpCompileException (0x80004005): c:\Code\JonDJones.Com.EpiServerForms\JonDJones.Com\Views\Pages\StartPage\index.cshtml(18): error CS1061: 'JonDJones.Com.Core.ViewModel.Pages.StartPageViewModel' does not contain a definition for 'CurrentBlock' and no extension method 'CurrentBlock' accepting a first argument of type 'JonDJones.Com.Core.ViewModel.Pages.StartPageViewModel' could be found (are you missing a using directive or an assembly reference?)
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.GetObjectFactory(String virtualPath, Boolean throwIfNotFound)
+   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.FileExists(String virtualPath)
+   at System.Web.Mvc.BuildManagerViewEngine.FileExists(ControllerContext controllerContext, String virtualPath)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.<>c__DisplayClass4.<GetPathFromGeneralName>b__0(String path)
+   at System.Web.WebPages.DefaultDisplayMode.GetDisplayInfo(HttpContextBase httpContext, String virtualPath, Func`2 virtualPathExists)
+   at System.Web.WebPages.DisplayModeProvider.<>c__DisplayClassb.<GetDisplayInfoForVirtualPath>b__8(IDisplayMode mode)
+   at System.Linq.Enumerable.WhereSelectListIterator`2.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source, Func`2 predicate)
+   at System.Web.WebPages.DisplayModeProvider.GetDisplayInfoForVirtualPath(String virtualPath, HttpContextBase httpContext, Func`2 virtualPathExists, IDisplayMode currentDisplayMode, Boolean requireConsistentDisplayMode)
+   at System.Web.WebPages.DisplayModeProvider.GetDisplayInfoForVirtualPath(String virtualPath, HttpContextBase httpContext, Func`2 virtualPathExists, IDisplayMode currentDisplayMode)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPathFromGeneralName(ControllerContext controllerContext, List`1 locations, String name, String controllerName, String areaName, String cacheKey, String[]& searchedLocations)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.GetPath(ControllerContext controllerContext, String[] locations, String[] areaLocations, String locationsPropertyName, String name, String controllerName, String cacheKeyPrefix, Boolean useCache, String[]& searchedLocations)
+   at System.Web.Mvc.VirtualPathProviderViewEngine.FindView(ControllerContext controllerContext, String viewName, String masterName, Boolean useCache)
+   at System.Web.Mvc.ViewEngineCollection.<>c__DisplayClassc.<FindView>b__b(IViewEngine e)
+   at System.Web.Mvc.ViewEngineCollection.Find(Func`2 lookup, Boolean trackSearchedPaths)
+   at System.Web.Mvc.ViewEngineCollection.Find(Func`2 cacheLocator, Func`2 locator)
+   at System.Web.Mvc.ViewEngineCollection.FindView(ControllerContext controllerContext, String viewName, String masterName)
+   at System.Web.Mvc.ViewResult.FindView(ControllerContext context)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<InvokeActionResultWithFilters>b__17()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilter(IResultFilter filter, ResultExecutingContext preContext, Func`1 continuation)
+   at System.Web.Mvc.ControllerActionInvoker.<>c__DisplayClass1a.<>c__DisplayClass1c.<InvokeActionResultWithFilters>b__19()
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<>c__DisplayClass1d.<BeginExecuteCore>b__18(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass4.<MakeVoidDelegate>b__3(IAsyncResult ar)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass4.<MakeVoidDelegate>b__3(IAsyncResult ar)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<>c__DisplayClass8.<BeginProcessRequest>b__3(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass4.<MakeVoidDelegate>b__3(IAsyncResult ar)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncResultWrapper.End(IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-03-12 23:30:48,660 [5] ERROR EPiServer.Global: 1.2.5 Unhandled exception in ASP.NET
+System.Web.HttpException (0x80004005): Path '/Views/Pages/StartPage/index.cshtml' was not found.
+   at System.Web.HttpNotFoundHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+System.Web.HttpException (0x80004005): Path '/Views/Pages/StartPage/index.cshtml' was not found.
+   at System.Web.HttpNotFoundHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2016-03-12 23:30:59,244 [7] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:30:59,308 [7] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:31:05,451 [7] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:31:05,536 [7] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:31:11,386 [7] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:31:09
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:31:11,469 [7] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:31:09
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:31:26,349 [5] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:31:26 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:31:26,429 [5] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:31:26 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:31:27,903 [5] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:31:27,984 [5] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:31:26 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:31:28,080 [5] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:31:09
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:31:28,164 [5] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:31:26 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:31:28
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:31:39,963 [7] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:31:39 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:31:40,084 [7] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:31:39 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:31:41,313 [7] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:31:41,411 [7] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:31:39 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:31:41,491 [7] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:31:09
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:31:41,579 [7] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:31:39 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:31:41
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:31:55,888 [12] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:31:55 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:31:55,985 [12] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:31:55 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:31:57,209 [12] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:31:57,303 [12] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:31:55 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:31:57,394 [12] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:31:09
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:31:57,483 [12] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:31:55 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:31:57
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:32:03,378 [7] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:03 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:32:03,488 [7] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:03 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:32:09,989 [7] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:32:10,113 [7] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:03 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:32:10,217 [7] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:31:09
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:32:10,318 [7] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:03 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:32:10
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:32:13,801 [13] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:03 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:32:13,907 [13] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:03 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:32:16,912 [13] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:32:13 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:03 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:32:17,053 [13] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:32:13 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:03 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:32:17,216 [13] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:31:09
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:32:17,343 [13] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:32:13 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:03 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:32:17
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:32:20,384 [13] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:20 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:32:20,500 [13] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:20 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:32:20,635 [13] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:32:13 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:03 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:32:20,748 [13] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:32:13 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:20 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:32:20,885 [13] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:31:09
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:32:21,034 [13] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:32:13 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:20 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:32:20
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:32:23,800 [12] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:20 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:32:23,932 [12] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:20 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:32:24,082 [12] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:32:13 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:03 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:32:24,225 [12] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:32:13 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:20 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:32:24,387 [12] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:31:09
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:32:24,516 [12] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:32:13 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:20 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:32:24
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:32:26,386 [13] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:26 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:32:26,515 [13] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:26 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:32:26,660 [13] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:32:13 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:03 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:32:26,802 [13] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:32:13 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:26 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:32:26,944 [13] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:31:09
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:32:27,096 [13] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:32:13 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:32:26 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:32:26
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:35:08,931 [28] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:35:08 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:35:09,088 [28] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:35:08 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:35:09,252 [28] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:35:08 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:35:08 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:35:09,397 [28] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:35:08 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:35:08 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:35:09,555 [28] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:31:09
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:35:09,707 [28] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:35:08 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:35:08 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:35:09
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:35:13,859 [24] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:35:08 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:35:14,013 [24] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:35:08 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:35:14,171 [24] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:35:08 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:35:08 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:35:14,327 [24] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:35:08 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:35:08 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:35:14,493 [24] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:31:09
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:35:14,662 [24] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:35:08 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:35:08 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:35:14
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:36:20,765 [27] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:36:20 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:36:20,932 [27] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:36:20 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:36:21,104 [27] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:36:20 (expires every 60 seconds)
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:36:20 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:36:21,275 [27] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:36:20 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:36:20 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:36:21,457 [27] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:30:58 (expires every 60 seconds)
+    <button id="btnExpireDonutOne" class="ExpireDonutOneButton">Expire donut one cache</button>
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:30:59 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:31:09
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:36:21,643 [27] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:30:56 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:36:20 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:36:20 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:36:21
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#btnExpirePage').click(function (e) {
+                var me = $(this);
+                e.preventDefault();
+
+                $.get('/ExpirePage/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutOne').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutOne/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+
+            $('#btnExpireDonutTwo').click(function (e) {
+                var me = $(this);
+
+                e.preventDefault();
+
+                $.get('/ExpireDonutTwo/', function (r) {
+                    console.log(r);
+                    me.prop('disabled', true);
+                });
+            });
+        });
+    </script>
+
+
+</body>
+</html>
+2016-03-12 23:36:32,451 [24] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:36:32 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:36:32,627 [24] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:36:32 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:36:32,829 [24] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:36:32 (expires every 60 seconds)
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:36:32 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:36:33,025 [24] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:36:32 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:36:32 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:36:33,218 [24] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:36:32 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:36:32 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:36:32 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:36:33
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:36:33,408 [24] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:36:32 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:36:32 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:36:32 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:36:33
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:47:35,745 [41] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:47:35 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:47:35,952 [41] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:47:35 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:47:36,154 [41] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:47:35 (expires every 60 seconds)
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:47:35 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:47:36,336 [41] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:47:35 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:47:35 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:47:36,513 [41] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:36:32 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:36:32 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:36:32 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:36:33
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:47:36,691 [41] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+
+<h2></h2>
+<p class="Timmer">
+    This page was cached at 23:36:32 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:47:35 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:47:35 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:47:36
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:47:43,240 [41] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:47:43 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:47:43,424 [41] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:47:43 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:47:43,645 [41] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:47:43 (expires every 60 seconds)
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:47:43 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:47:43,824 [41] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:47:43 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:47:43 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:47:44,017 [41] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+<img src="./jondjones.png" />
+
+<p class="Timmer">
+    This page was cached at 23:47:43 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:47:43 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:47:43 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:47:44
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:47:44,189 [41] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+    <div>
+
+        
+
+
+<img src="./jondjones.png" />
+
+<p class="Timmer">
+    This page was cached at 23:47:43 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:47:43 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:47:43 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:47:44
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    </div>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:49:26,086 [6] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:49:26 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:49:26,323 [6] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:49:26 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:49:26,527 [6] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:49:25 (expires every 60 seconds)
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:49:26 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:49:26,706 [6] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:49:25 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:49:26 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:49:28,685 [6] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+        
+
+
+<img src="./jondjones.png" />
+
+<p class="Timmer">
+    This page was cached at 23:49:23 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:49:25 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:49:26 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:49:27
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:49:28,859 [6] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+        
+
+
+<img src="./jondjones.png" />
+
+<p class="Timmer">
+    This page was cached at 23:49:23 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:49:25 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:49:26 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:49:27
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:49:35,748 [8] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:49:35 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:49:35,941 [8] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:49:35 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:49:36,138 [8] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:49:35 (expires every 60 seconds)
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:49:35 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:49:36,340 [8] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:49:35 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:49:35 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:49:36,548 [8] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+        
+
+
+<img src="./jondjones.png" />
+
+<p class="Timmer">
+    This page was cached at 23:49:35 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:49:35 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:49:35 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:49:36
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:49:36,804 [8] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+        
+
+
+<img src="./jondjones.png" />
+
+<p class="Timmer">
+    This page was cached at 23:49:35 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:49:35 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:49:35 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:49:36
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:53:33,583 [20] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:53:33 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:53:33,812 [20] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:53:33 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:53:34,017 [20] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:53:33 (expires every 60 seconds)
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:53:33 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:53:34,214 [20] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:53:33 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:53:33 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:53:34,413 [20] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+        
+
+
+<img src="./jondjones.png" />
+
+<p class="Timmer">
+    This page was cached at 23:53:33 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:53:33 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:53:33 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:53:34
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:53:34,600 [20] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+        
+
+
+<img src="./jondjones.png" />
+
+<p class="Timmer">
+    This page was cached at 23:53:33 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:53:33 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:53:33 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:53:34
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:53:39,759 [20] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:53:39 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:53:39,993 [20] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:53:39 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:53:40,195 [20] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:53:39 (expires every 60 seconds)
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:53:39 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:53:40,369 [20] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:53:39 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:53:39 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:53:40,570 [20] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+        
+
+
+<img src="./jondjones.png" />
+
+<p class="Timmer">
+    This page was cached at 23:53:39 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:53:39 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:53:39 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:53:40
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:53:40,752 [20] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+        
+
+
+<img src="./jondjones.png" />
+
+<p class="Timmer">
+    This page was cached at 23:53:39 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:53:39 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:53:39 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:53:40
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:55:04,862 [22] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:04 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:55:05,045 [22] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:04 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:55:05,267 [22] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:55:04 (expires every 60 seconds)
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:04 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:55:05,455 [22] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:55:04 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:04 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:55:05,644 [22] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+        
+
+
+<img src="./jondjones.png" />
+
+<p class="Timmer">
+    This page was cached at 23:53:39 (expires in 24h)
+</p>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:53:39 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:53:39 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:53:40
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:55:05,818 [22] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+        
+
+
+<img src="./jondjones.png" />
+
+<p class="Timmer">
+    This page was cached at 23:53:39 (expires in 24h)
+</p>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:55:04 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:04 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:55:05
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:55:13,360 [22] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:13 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:55:13,616 [22] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:13 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:55:13,806 [22] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:55:13 (expires every 60 seconds)
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:13 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:55:13,985 [22] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:55:13 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:13 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:55:14,189 [22] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+        
+
+
+<img src="./jondjones.png" />
+
+This page was cached at 23:55:13 (expires in 24h)
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:55:13 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:13 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:55:14
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:55:14,366 [22] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+        
+
+
+<img src="./jondjones.png" />
+
+This page was cached at 23:55:13 (expires in 24h)
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:55:13 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:13 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:55:14
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:55:48,752 [18] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:48 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:55:48,924 [18] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:48 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:55:49,133 [18] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:55:13 (expires every 60 seconds)
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:13 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:55:49,309 [18] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:55:13 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:48 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:55:49,492 [18] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+        
+
+
+<img src="./jondjones.png" />
+
+This page was cached at 23:55:13 (expires in 24h)
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:55:13 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:13 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:55:14
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:55:49,673 [18] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML FROM CACHE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+        
+
+
+<img src="./jondjones.png" />
+
+This page was cached at 23:55:13 (expires in 24h)
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:55:13 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:48 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:55:49
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:55:55,434 [18] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:55 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:55:55,627 [18] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 112:0::Nested Donut <p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:55 (expires every 5 seconds)
+</p>
+
+2016-03-12 23:55:55,811 [18] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:55:55 (expires every 60 seconds)
+</p>
+<div>
+<div><!--Donut#"112"#--><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:55 (expires every 5 seconds)
+</p>
+<!--EndDonut--></div>
+</div>
+2016-03-12 23:55:56,015 [18] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 110:0::Donut One 
+<p class="DonutHole">
+    Donut One cached at: 23:55:55 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:55 (expires every 5 seconds)
+</p>
+</div>
+</div>
+2016-03-12 23:55:56,210 [18] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: PRE DONUT HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+        
+
+
+<img src="./jondjones.png" />
+<div>
+This page was cached at 23:55:55 (expires in 24h)
+</div>
+<div>
+<div><!--Donut#"110"#-->
+<p class="DonutHole">
+    Donut One cached at: 23:55:55 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:55 (expires every 5 seconds)
+</p>
+</div>
+</div><!--EndDonut--><!--Donut#"113"#-->
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:55:56
+</p>
+<!--EndDonut--></div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>
+2016-03-12 23:55:56,396 [18] ERROR JonDJones.com.Core.Donut.EpiServerDonutCacheAttribute: DONUT REPLACED HTML LIVE 32:0::HomePage <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta name="description" content="HomePage">
+    <meta name="author" content="HomePage">
+
+    <title>
+        HomePage
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="/ClientResources/css/style.css" type="text/css" media="screen" />
+   
+</head>
+
+<body>
+
+        
+
+
+<img src="./jondjones.png" />
+<div>
+This page was cached at 23:55:55 (expires in 24h)
+</div>
+<div>
+<div>
+<p class="DonutHole">
+    Donut One cached at: 23:55:55 (expires every 60 seconds)
+</p>
+<div>
+<div><p class="Nested">
+    Donut nested within another donut. Rendered at : 23:55:55 (expires every 5 seconds)
+</p>
+</div>
+</div>
+
+<p class="DonutHole">
+    Donut Two, not cached at all
+    <br />
+    Generated at : 23:55:56
+</p>
+</div>
+</div>
+<p>
+    This is again the main page
+</p>
+
+<form action="/ExpirePage/" method="post">    <button class="ExpireButton">Expire All Cache</button>
+</form>
+       
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/ClientResources/js/jquery.easing.1.3.js"></script>
+  
+    
+
+</body>
+</html>

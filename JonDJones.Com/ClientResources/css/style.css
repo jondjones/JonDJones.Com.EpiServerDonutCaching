@@ -1,0 +1,41 @@
+.CacheExpired
+{
+    font-size: 35px;
+    color: red;
+}
+
+.ExpireButton
+{
+    padding: 2%;
+    background: black;
+    color: white;
+    font-size: 24px;
+}
+
+
+.ExpireDonutOneButton
+{
+    padding: 1%;
+    background: black;
+    color: white;
+    font-size: 14px;
+}
+
+.DonutHole
+{
+    padding: 1%;
+    font-size: 40px;
+    background: #ec4e1f;
+}
+
+.Nested
+{
+    font-size: 40px;
+    background: #8fb33e;
+}
+
+body
+{
+    font-size: 40px;
+    text-align: center;
+}

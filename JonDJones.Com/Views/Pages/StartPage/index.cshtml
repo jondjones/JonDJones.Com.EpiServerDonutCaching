@@ -1,0 +1,27 @@
+﻿@model JonDJones.Com.Core.ViewModel.Pages.StartPageViewModel
+@using JonDJones.com.Core.Donut
+
+@if (Model.Refreshed)
+{
+    <div class="CacheExpired">
+        Cache Expired
+    </div>
+}
+
+<img src="./jondjones.png" />
+<div>
+This page was cached at @Model.TheTime (expires in 24h)
+</div>
+<div>
+    @{
+        Html.DonutHole(Model.CurrentPage.MainContentArea);
+    }
+</div>
+<p>
+    This is again the main page
+</p>
+
+@using (Html.BeginForm("ExpirePage", "StartPage", FormMethod.Post))
+{
+    <button class="ExpireButton">Expire Cache</button>
+}
